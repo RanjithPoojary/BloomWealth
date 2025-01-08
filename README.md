@@ -36,7 +36,7 @@ Before setting up the application, ensure you have the following installed:
 Ensure the project files are extracted to your local machine.
 
 ```bash
-git clone "https://github.com/RanjithPoojary/BloomWealth"
+git clone "https://github.com/RanjithPoojary/BloomWealth.git"
 ```
 ---
 
