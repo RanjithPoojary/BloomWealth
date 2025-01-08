@@ -1,0 +1,10 @@
+<form method="POST" action="{{ url_for('portfolio.add_investment') }}">
+    <select name="fund_house" required>
+        {% for house in fund_houses %}
+        <option value="{{ house }}">{{ house }}</option>
+        {% endfor %}
+    </select>
+    <input type="text" name="scheme_code" placeholder="Scheme Code" required>
+    <input type="number" name="units" placeholder="Number of Units" required>
+    <button type="submit">Add Investment</button>
+</form>

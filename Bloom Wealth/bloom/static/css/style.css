@@ -1,0 +1,190 @@
+/* static/css/style.css */
+.auth-form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+/* static/css/style.css */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: #000;
+    font-size: 1.5rem;
+}
+.nav-link {
+    color: #666;
+    font-size: 1rem;
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 0.25rem;
+}
+
+.alert {
+    margin-bottom: 0;
+    text-align: center;
+}
+.btn-dark:hover {
+  background-color: #28a745;
+  border-color: #218838;
+}
+.fancy-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ae6124, #787321);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Georgia', sans-serif;
+}
+.btn {
+    border-radius: 30px; /* Rounded corners */
+}
+
+.btn-sm {
+    padding: 5px 10px;
+}
+
+.gap-3 {
+    gap: 1rem; /* Spacing between buttons */
+}
+/* Dashboard Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+/* Pagination Styling */
+/* Pagination container */
+.pagination-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styling for pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Pagination items */
+.page-item {
+  margin: 0 5px;
+}
+
+/* Pagination links */
+.page-link {
+  color: #007bff;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Hover effects */
+.page-link:hover {
+  background-color: #f1f1f1;
+  border-color: #007bff;
+}
+
+/* Active page */
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+/* Disabled pagination items */
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+}
+
+/* Previous and Next arrows */
+.page-link[aria-label="Previous"], .page-link[aria-label="Next"] {
+  font-size: 18px;
+}
+
+/* First and Last arrows */
+.page-link[aria-label="First"], .page-link[aria-label="Last"] {
+  font-size: 18px;
+}
+
+/* Responsive Design - Adjust for mobile view */
+@media (max-width: 768px) {
+  .page-link {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

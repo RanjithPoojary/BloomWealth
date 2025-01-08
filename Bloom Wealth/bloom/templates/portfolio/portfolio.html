@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Your Portfolio</h1>
+<!--    <a href="{{ url_for('portfolio.fund_selector') }}">Add Investment</a>-->
+    <table>
+        <tr>
+            <th>Fund House</th>
+            <th>Scheme Code</th>
+            <th>Units</th>
+            <th>Amount Invested</th>
+            <th>Current Value</th>
+            <th>Last Updated</th>
+        </tr>
+        {% for portfolio in portfolios %}
+        <tr>
+            <td>{{ portfolio.fund_name }}</td>
+            <td>{{ portfolio.scheme_code }}</td>
+            <td>{{ portfolio.units_owned }}</td>
+            <td>{{ portfolio.investment_amount }}</td>
+            <td>{{ portfolio.current_value }}</td>
+            <td>{{ portfolio.last_updated }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

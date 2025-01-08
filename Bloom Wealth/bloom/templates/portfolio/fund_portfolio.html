@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center text-primary mb-4">{{ name }}</h1>
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Fund Details</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for key, value in fund_data.items() %}
+                    <tr>
+                        <td><strong>{{ key | replace('_', ' ') | title }}</strong></td>
+                        <td>{{ value }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="mt-4">
+                <h4>Buy / Sell Fund</h4>
+                <form method="POST" action="{{ url_for('portfolio.transact', fund_id=fund_data.Unique_No) }}">
+                    <div class="form-group">
+                        <label for="units">Units:</label>
+                        <input type="number" class="form-control" id="units" name="units" required min="1" step="any">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success" name="action" value="buy">Buy</button>
+                        <button type="submit" class="btn btn-danger" name="action" value="sell">Sell</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card-header {
+        font-size: 1.75rem;
+        font-weight: bold;
+        border-bottom: 2px solid #ddd;
+    }
+    .table {
+        margin-top: 20px;
+    }
+    .thead-dark th {
+        background-color: #343a40;
+        color: #fff;
+        text-align: center;
+    }
+    table th, table td {
+        padding: 15px;
+        text-align: left;
+        vertical-align: middle;
+    }
+    table td {
+        word-wrap: break-word;
+        font-size: 0.95rem;
+    }
+    table tr:hover {
+        background-color: #f8f9fa;
+    }
+</style>
+{% endblock %}
